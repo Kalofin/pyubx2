@@ -41,7 +41,7 @@ def read_messages(stream, lock, stopevent, ubxreader):
     """
     # pylint: disable=unused-variable, broad-except
 
-    while not stopevent.is_set:
+    while not stopevent.is_set():
         if stream.in_waiting:
             try:
                 lock.acquire()
